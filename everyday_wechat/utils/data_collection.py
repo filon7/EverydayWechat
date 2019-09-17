@@ -13,7 +13,8 @@ from everyday_wechat.utils.common import (
     get_constellation_name,
 )
 from everyday_wechat.utils import config
-from everyday_wechat.control.horoscope.xzw_horescope import get_today_horoscope
+#from everyday_wechat.control.horoscope.xzw_horescope import get_today_horoscope
+from everyday_wechat.control.horoscope.T2345_horescope import get_today_horoscope
 # from everyday_wechat.control.calendar.sojson_calendar import get_sojson_calendar
 from everyday_wechat.control.calendar.rt_calendar import get_rtcalendar
 
