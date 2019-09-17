@@ -27,8 +27,10 @@ def get_sojson_weather(city_name, is_tomorrow=False):
         return None
     city_code = CITY_CODE_DICT.get(city_name, None)
     if not city_code:
-        print('没有此城市的消息...')
-        return None
+        city_code = CITY_CODE_DICT.get(city_name+"市", None)
+        if not city_code:
+            print('没有此城市的消息...')
+            return None
     print('获取天气信息...')
 
     weather_url = 'http://t.weather.sojson.com/api/weather/city/{}'.format(city_code)
